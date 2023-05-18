@@ -19,7 +19,7 @@ class Kartya {
         this.#divElem.on("click", ()=> {
 
             this.kattintas();
-            this.kattintasTrigger();
+            this.#kattintasTrigger();
         });
         
 
