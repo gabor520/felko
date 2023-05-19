@@ -32,6 +32,51 @@ class JatekTer {
             return 0.5 - Math.random();
         });
     }
+    #ellenorzes(){
+        if (this.#kivalasztottKartyaLista.length == 2){
+            this.#TriggerBlocked();
+
+        if (
+            this.#kivalasztottKartyaLista[0].getFajlnev() ===
+            this.#kivalasztottKartyaLista[1].getFajlnev()
+
+        ){
+            this.#kivalasztottKartyaLista[0].eltuntet();
+            this.#kivalasztottKartyaLista[1].eltuntet();
+            this.#kivalasztottKartyaLista.splice(0, 2);
+        
+        this.#TriggerUnblocked();
+        } else {
+            setTimeout(()=>{
+                this.#kivalasztottKartyaLista[0].kattintas();
+                this.#kivalasztottKartyaLista[1].kattintas();
+
+                this.#kivalasztottKartyaLista.splice(0, 2);
+
+                this.#TriggerUnBlocked();
+
+            }, 1000);
+        }
+
+       
+    }
+    
+}
+eltuntet(){
+    this.#divElem.css("visibility", "hidden");
+}
+
+#TriggerBlocked(){
+    window.dispatchEvent(new Event("gameBlocked"));
+    console.log("blokkolt");
+
+}
+#TriggerUnBlocked(){
+    window.dispatchEvent(new Event("gameUnBlocked"));
+    console.log("nem blokkolt");
+
+
+}
     
 }
 

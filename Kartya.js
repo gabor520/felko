@@ -21,6 +21,21 @@ class Kartya {
             this.kattintas();
             this.#kattintasTrigger();
         });
+        this.#blokkolt = false;
+        this.#divElem.on("click", () => {
+            if (this.#blokkolt){
+                return;
+            }
+            this.kattintas();
+            this.#kattintasTrigger();
+        });
+
+        $(window).on("gameBlocked", ()=>{
+            this.#blokkolt = true;
+        });
+        $(window).on("gameUnBlocked", ()=>{
+            this.#blokkolt = false;
+        });
         
 
        
@@ -47,6 +62,7 @@ class Kartya {
         });
         window.dispatchEvent(esemeny);
     }
+    
 }
 
 
