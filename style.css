@@ -56,7 +56,8 @@ footer{
   article{
   
   grid-template-columns: repeat(1, 200px);
-  padding: 250px;
+  padding-right: 250px;
+  padding-left: 250px;
   
 }
   
