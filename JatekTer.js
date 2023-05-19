@@ -45,7 +45,7 @@ class JatekTer {
             this.#kivalasztottKartyaLista[1].eltuntet();
             this.#kivalasztottKartyaLista.splice(0, 2);
         
-        this.#TriggerUnblocked();
+            this.TriggerUnblocked();
         } else {
             setTimeout(()=>{
                 this.#kivalasztottKartyaLista[0].kattintas();
@@ -53,7 +53,7 @@ class JatekTer {
 
                 this.#kivalasztottKartyaLista.splice(0, 2);
 
-                this.#TriggerUnBlocked();
+                this.TriggerUnBlocked();
 
             }, 1000);
         }
@@ -62,16 +62,14 @@ class JatekTer {
     }
     
 }
-eltuntet(){
-    this.#divElem.css("visibility", "hidden");
-}
+
 
 #TriggerBlocked(){
     window.dispatchEvent(new Event("gameBlocked"));
     console.log("blokkolt");
 
 }
-#TriggerUnBlocked(){
+TriggerUnBlocked(){
     window.dispatchEvent(new Event("gameUnBlocked"));
     console.log("nem blokkolt");
 

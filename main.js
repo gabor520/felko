@@ -24,5 +24,6 @@ const adatLista = [
     "kepek/kep6.jpg",
     "kepek/kep7.jpg",
     "kepek/kep8.jpg",
+    "kepek/kep9.jpg",
     "kepek/kep10.jpg",
 ];

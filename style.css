@@ -1,7 +1,10 @@
-#keptarolo{
+article{
     display: grid;
       
-      grid-template-columns: repeat(3, 80px);
-      grid-template-rows: repeat(3, 80px);
+      grid-template-columns: repeat(4, 200px);
+      grid-template-rows: repeat(5, 200px);
       
+}
+img{
+  width: 200px;
 }

@@ -8,7 +8,7 @@ class Kartya {
         this.#fajlnev = fajlnev;
 
         szuloElem.append(`<div class="kartya">
-                                <img scr="" alt="kép">
+                                <img src="" alt="kép">
                                 </div>`);
         this.#divElem = szuloElem.children("div:last-child");
         this.#imgElem = this.#divElem.children("img");
@@ -62,19 +62,11 @@ class Kartya {
         });
         window.dispatchEvent(esemeny);
     }
+    eltuntet(){
+        this.#divElem.css("visibility", "hidden");
+    }
     
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
