@@ -30,10 +30,10 @@ class Kartya {
             this.#kattintasTrigger();
         });
 
-        $(window).on("gameBlocked", ()=>{
+        $(window).on("gameBlocked", () => {
             this.#blokkolt = true;
         });
-        $(window).on("gameUnBlocked", ()=>{
+        $(window).on("gameUnBlocked", () => {
             this.#blokkolt = false;
         });
         
@@ -65,6 +65,10 @@ class Kartya {
     eltuntet(){
         this.#divElem.css("visibility", "hidden");
     }
+    getFajlnev(){
+        return this.#fajlnev()
+        
+    }  
     
 }
 

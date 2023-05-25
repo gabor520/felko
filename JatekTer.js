@@ -2,8 +2,8 @@ import Kartya from "./Kartya.js";
 class JatekTer {
     #kartyaLista = [];
     #kivalasztottKartyaLista =[];
-    constructor(kartyalista){
-        this.#kartyaLista = kartyalista;
+    constructor(kartyaLista){
+        this.#kartyaLista = kartyaLista;
         this.#init();
 
         $(window).on("kartyaKattintas",(event)=>{
@@ -47,7 +47,7 @@ class JatekTer {
         
             this.TriggerUnblocked();
         } else {
-            setTimeout(()=>{
+            setTimeout(() => {
                 this.#kivalasztottKartyaLista[0].kattintas();
                 this.#kivalasztottKartyaLista[1].kattintas();
 
